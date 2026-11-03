@@ -12,3 +12,18 @@ Keep it in sync with that site when the mission, contacts, or policies change.
   and push; the site updates in a minute or two.
 - `logo-mark.png`, `favicon.png` and `apple-touch-icon.png` are cropped from
   the main site's `public/logo.png`.
+
+## Keeping it out of search engines
+
+This page exists only to be referenced on filings, so it is kept out of
+search results:
+
+- Every HTML page carries
+  `<meta name="robots" content="noindex, nofollow, noimageindex">`.
+  GitHub Pages can't set response headers, so an `X-Robots-Tag` header isn't
+  available; the meta tag is the supported equivalent.
+- There is deliberately **no `robots.txt`**. A `Disallow: /` would stop
+  crawlers from fetching the page, so they would never see the `noindex` and
+  could still list the bare URL if it were linked from elsewhere.
+- The `Robots meta` workflow fails CI if any `.html` file is missing the tag.
+  Add the same tag to any new page.
