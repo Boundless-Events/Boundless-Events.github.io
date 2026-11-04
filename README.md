@@ -1,15 +1,28 @@
 # boundless-events.github.io
 
-A one-page, static summary of Boundless Events (a 501(c)(3) nonprofit) for
-use as the organization website on IRS and other formal filings.
+A one-page, static public-information site for Boundless Events (a 501(c)(3)
+nonprofit), for the IRS, donors, partner organizations, and the general public.
 
-All content is adapted from www.boundlessevents.org (About, Code of Conduct,
-Consent Policy, Feedback & Incident Response, Volunteer, Scholarship pages).
-Keep it in sync with that site when the mission, contacts, or policies change.
+Content follows the **Boundless Events: Public Information Website Brief**.
+Wording the brief marks as approved (intro, mission, vision, values, What We
+Do, history) is used verbatim. Policy summaries are condensed from the Code of
+Conduct, Consent Policy, Photography & Video and Feedback & Incident Response
+pages on www.boundlessevents.org; keep them in sync when those policies change.
+
+Per the brief, the page must not carry event listings, promotions, ticketing or
+registration links, social or event feeds, NSFW imagery, or links back to the
+main site. Every change must be approved by the Executive Director and the tax
+accountant before it is merged.
 
 - Hosting: GitHub Pages, deployed from the `main` branch root.
-- No build step, no analytics, no external scripts or fonts. Edit `index.html`
-  and push; the site updates in a minute or two.
+- No build step, no analytics, no external scripts or fonts. To update it,
+  edit `index.html` in GitHub's web editor (pencil icon), choose "Create a new
+  branch and start a pull request", and merge after approval. The site updates
+  a minute or two after merge.
+- Fonts are self-hosted in `fonts/` (both SIL OFL): Montserrat for body text,
+  and Barlow Condensed as the heading fallback. Headings name Blanch first; to
+  serve Blanch to every visitor, add a web-licensed `fonts/blanch.woff2` and an
+  `@font-face` for it at the top of the `<style>` block.
 - `logo-mark.png`, `favicon.png` and `apple-touch-icon.png` are cropped from
   the main site's `public/logo.png`.
 
