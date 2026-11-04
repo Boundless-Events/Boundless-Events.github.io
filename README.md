@@ -1,4 +1,4 @@
-# boundless-events.github.io
+# education.boundlessevents.org
 
 A one-page, static public-information site for Boundless Events (a 501(c)(3)
 nonprofit), for the IRS, donors, partner organizations, and the general public.
@@ -14,7 +14,10 @@ registration links, social or event feeds, NSFW imagery, or links back to the
 main site. Every change must be approved by the Executive Director and the tax
 accountant before it is merged.
 
-- Hosting: GitHub Pages, deployed from the `main` branch root.
+- Hosting: GitHub Pages, deployed from the `main` branch root, served at
+  https://education.boundlessevents.org (the `CNAME` file; DNS is a Namecheap
+  `CNAME education → boundless-events.github.io`). The old
+  boundless-events.github.io URL redirects there.
 - No build step, no analytics, no external scripts or fonts. To update it,
   edit `index.html` in GitHub's web editor (pencil icon), choose "Create a new
   branch and start a pull request", and merge after approval. The site updates
