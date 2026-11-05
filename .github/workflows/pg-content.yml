@@ -1,0 +1,24 @@
+name: PG content
+
+# This site is for the IRS, donors and partners, so it stays general-audience.
+# Fail CI if any page mentions kink, BDSM or adult/play events.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No adult-content terms
+        run: |
+          pattern='kink|bdsm|fetish|munch|dungeon|play (event|party|space)|power exchange|non-sexual|sex-positiv|sex positiv|adult event'
+          if grep -rniE "$pattern" --include='*.html' .; then
+            echo "::error::Found adult-content terms (above). Keep this site PG."
+            exit 1
+          fi
