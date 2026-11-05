@@ -3,11 +3,12 @@
 A one-page, static public-information site for Boundless Events (a 501(c)(3)
 nonprofit), for the IRS, donors, partner organizations, and the general public.
 
-Content follows the **Boundless Events: Public Information Website Brief**.
-Wording the brief marks as approved (intro, mission, vision, values, What We
-Do, history) is used verbatim. Policy summaries are condensed from the Code of
-Conduct, Consent Policy, Photography & Video and Feedback & Incident Response
-pages on www.boundlessevents.org; keep them in sync when those policies change.
+Content is general-audience (PG): it describes the organization's education,
+community-building and consent work without references to kink, BDSM, or adult
+events. The `PG content` workflow fails CI if any page uses those terms. Policy
+summaries are condensed from the Code of Conduct, Consent Policy, Photography &
+Video and Feedback & Incident Response pages on www.boundlessevents.org; keep
+them in sync (in PG wording) when those policies change.
 
 Per the brief, the page must not carry event listings, promotions, ticketing or
 registration links, social or event feeds, NSFW imagery, or links back to the
